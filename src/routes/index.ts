@@ -1,5 +1,5 @@
 import Vue from "vue";
-import VueRouter, { Route } from "vue-router";
+import VueRouter, { NavigationGuardNext, Route } from "vue-router";
 import { ItemView, UserView } from "../views";
 import createListView from "../views/CreateListView";
 import bus from "../utils/bus";
@@ -18,7 +18,11 @@ export default new VueRouter({
       path: "/news",
       name: "news",
       component: createListView("NewsView"),
-      beforeEnter(routeTo: Route, routeFrom: Route, next: Route) {
+      beforeEnter(
+        routeTo: Route,
+        routeFrom: Route,
+        next: NavigationGuardNext<Vue>
+      ) {
         bus.$emit("on:progress");
         store
           .dispatch("FETCH_LIST", routeTo.name)
