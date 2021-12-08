@@ -12,6 +12,11 @@ export default {
   components: {
     ListItem,
   },
+  data() {
+    return {
+      // key: value,
+    };
+  },
   methods: {
     async fetchNewsItems() {
       const response = await fetchNews();
