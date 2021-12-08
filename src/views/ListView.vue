@@ -22,7 +22,6 @@ export default {
   methods: {
     async fetchNewsItems() {
       const response = await fetchNews();
-      console.log(response.data);
       this.newsItems = response.data;
     },
   },
