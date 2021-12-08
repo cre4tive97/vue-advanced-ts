@@ -30,7 +30,6 @@ export default Vue.extend({
     },
     offProgress() {
       this.loading = false;
-      this.$store.state;
     },
   },
   created() {
