@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import { state } from "@/store/state";
+import { state, RootState } from "@/store/state";
 // import getters from "./getters.js";
 // import mutations from "./mutations.js";
 // import actions from "./actions.js";
