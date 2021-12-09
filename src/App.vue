@@ -32,14 +32,14 @@ export default Vue.extend({
     },
     offProgress() {
       this.loading = false;
-      this.$store.commit(MutationTypes.SET_NEWS);
-      this.$store.dispatch(ActionTypes.FETCH_NEWS);
+      this.$store.state.news;
     },
   },
   async created() {
     bus.$on("on:progress", this.onProgress);
     bus.$on("off:progress", this.offProgress);
     const response = await this.$store.dispatch(ActionTypes.FETCH_NEWS);
+    this.$store.commit(MutationTypes.SET_NEWS);
   },
 });
 </script>
