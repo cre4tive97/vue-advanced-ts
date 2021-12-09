@@ -1,7 +1,7 @@
 import { NewsItem } from "@/api";
 import { RootState } from "./state";
 
-enum MutationTypes {
+export enum MutationTypes {
   SET_NEWS = "SET_NEWS",
 }
 
